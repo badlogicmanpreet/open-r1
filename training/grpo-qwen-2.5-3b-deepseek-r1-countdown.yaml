@@ -5,14 +5,12 @@ torch_dtype: bfloat16
 attn_implementation: flash_attention_2
 bf16: true
 tf32: true
-output_dir: runs/qwen-2.5-3b-r1-cd-manpreet
+output_dir: runs/qwen-2.5-3b-r1-manpreet-countdown
 
 # Dataset arguments
 dataset_id_or_path: Jiayi-Pan/Countdown-Tasks-3to4
 
-num_processes: 7
-
-# Lora Argumentsvllm_device
+# Lora Arguments
 # No LoRA is used here
 
 # Training arguments
@@ -32,7 +30,7 @@ max_completion_length: 1024
 num_generations: 8
 use_vllm: true
 # vllm_device: "cuda:3"
-vllm_device: auto
+vllm_device: 7
 vllm_gpu_memory_utilization: 0.5
 
 # Logging arguments
