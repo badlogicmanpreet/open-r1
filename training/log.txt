@@ -1,0 +1,538 @@
+ubuntu@209-20-157-91:~/grpo$ accelerate launch --num_processes 7 --config_file recipes/deepspeed_zero3.yaml run_r1_grpo.py --config config/grpo-qwen-2.5-3b-deepseek-r1-countdown.yaml
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+[2025-02-12 07:32:17,957] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2025-02-12 07:32:18.996991: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-02-12 07:32:19.010024: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739345539.026391   10872 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1739345539.031106   10872 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-02-12 07:32:19.046453: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX512F AVX512_VNNI AVX512_BF16 AVX512_FP16 AVX_VNNI, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+W0212 07:32:20.901000 10872 torch/distributed/run.py:792] 
+W0212 07:32:20.901000 10872 torch/distributed/run.py:792] *****************************************
+W0212 07:32:20.901000 10872 torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0212 07:32:20.901000 10872 torch/distributed/run.py:792] *****************************************
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+2025-02-12 07:32:26.617427: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739345546.633638   11094 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1739345546.638423   11094 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-02-12 07:32:26.788847: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739345546.804920   11096 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1739345546.809636   11096 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-02-12 07:32:26.819110: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739345546.835254   11091 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1739345546.839954   11091 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-02-12 07:32:26.869221: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739345546.885312   11095 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1739345546.890062   11095 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-02-12 07:32:26.898679: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-02-12 07:32:26.898680: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739345546.914783   11092 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1739345546.914791   11093 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-02-12 07:32:26.918567: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+E0000 00:00:1739345546.919522   11092 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+E0000 00:00:1739345546.919534   11093 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739345546.934521   11090 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1739345546.939182   11090 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+[2025-02-12 07:32:28,579] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-02-12 07:32:28,749] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-02-12 07:32:28,819] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-02-12 07:32:28,962] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-02-12 07:32:28,964] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-02-12 07:32:29,077] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-02-12 07:32:29,084] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+INFO 02-12 07:32:29 __init__.py:183] Automatically detected platform cuda.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 111, in _get_module
+    return importlib.import_module("." + module_name, self.__name__)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/trainer/grpo_trainer.py", line 53, in <module>
+    from vllm import LLM, SamplingParams
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/__init__.py", line 6, in <module>
+    from vllm.engine.arg_utils import AsyncEngineArgs, EngineArgs
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/engine/arg_utils.py", line 18, in <module>
+    from vllm.executor.executor_base import ExecutorBase
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/executor/executor_base.py", line 13, in <module>
+    from vllm.platforms import current_platform
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/platforms/__init__.py", line 215, in __getattr__
+    _current_platform = resolve_obj_by_qualname(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/utils.py", line 1894, in resolve_obj_by_qualname
+    module = importlib.import_module(module_name)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/platforms/cuda.py", line 15, in <module>
+    import vllm._C  # noqa
+ImportError: /home/ubuntu/.local/lib/python3.10/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN5torch3jit17parseSchemaOrNameERKSsb
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/grpo/run_r1_grpo.py", line 14, in <module>
+    from trl import GRPOConfig, GRPOTrainer, get_peft_config, ModelConfig, TrlParser
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 102, in __getattr__
+    value = getattr(module, name)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 101, in __getattr__
+    module = self._get_module(self._class_to_module[name])
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 113, in _get_module
+    raise RuntimeError(
+RuntimeError: Failed to import trl.trainer.grpo_trainer because of the following error (look up to see its traceback):
+/home/ubuntu/.local/lib/python3.10/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN5torch3jit17parseSchemaOrNameERKSsb
+INFO 02-12 07:32:29 __init__.py:183] Automatically detected platform cuda.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 111, in _get_module
+    return importlib.import_module("." + module_name, self.__name__)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/trainer/grpo_trainer.py", line 53, in <module>
+    from vllm import LLM, SamplingParams
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/__init__.py", line 6, in <module>
+    from vllm.engine.arg_utils import AsyncEngineArgs, EngineArgs
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/engine/arg_utils.py", line 18, in <module>
+    from vllm.executor.executor_base import ExecutorBase
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/executor/executor_base.py", line 13, in <module>
+    from vllm.platforms import current_platform
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/platforms/__init__.py", line 215, in __getattr__
+    _current_platform = resolve_obj_by_qualname(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/utils.py", line 1894, in resolve_obj_by_qualname
+    module = importlib.import_module(module_name)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/platforms/cuda.py", line 15, in <module>
+    import vllm._C  # noqa
+ImportError: /home/ubuntu/.local/lib/python3.10/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN5torch3jit17parseSchemaOrNameERKSsb
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/grpo/run_r1_grpo.py", line 14, in <module>
+    from trl import GRPOConfig, GRPOTrainer, get_peft_config, ModelConfig, TrlParser
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 102, in __getattr__
+    value = getattr(module, name)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 101, in __getattr__
+    module = self._get_module(self._class_to_module[name])
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 113, in _get_module
+    raise RuntimeError(
+RuntimeError: Failed to import trl.trainer.grpo_trainer because of the following error (look up to see its traceback):
+/home/ubuntu/.local/lib/python3.10/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN5torch3jit17parseSchemaOrNameERKSsb
+INFO 02-12 07:32:29 __init__.py:183] Automatically detected platform cuda.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 111, in _get_module
+    return importlib.import_module("." + module_name, self.__name__)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/trainer/grpo_trainer.py", line 53, in <module>
+    from vllm import LLM, SamplingParams
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/__init__.py", line 6, in <module>
+    from vllm.engine.arg_utils import AsyncEngineArgs, EngineArgs
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/engine/arg_utils.py", line 18, in <module>
+    from vllm.executor.executor_base import ExecutorBase
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/executor/executor_base.py", line 13, in <module>
+    from vllm.platforms import current_platform
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/platforms/__init__.py", line 215, in __getattr__
+    _current_platform = resolve_obj_by_qualname(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/utils.py", line 1894, in resolve_obj_by_qualname
+    module = importlib.import_module(module_name)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/platforms/cuda.py", line 15, in <module>
+    import vllm._C  # noqa
+ImportError: /home/ubuntu/.local/lib/python3.10/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN5torch3jit17parseSchemaOrNameERKSsb
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/grpo/run_r1_grpo.py", line 14, in <module>
+    from trl import GRPOConfig, GRPOTrainer, get_peft_config, ModelConfig, TrlParser
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 102, in __getattr__
+    value = getattr(module, name)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 101, in __getattr__
+    module = self._get_module(self._class_to_module[name])
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 113, in _get_module
+    raise RuntimeError(
+RuntimeError: Failed to import trl.trainer.grpo_trainer because of the following error (look up to see its traceback):
+/home/ubuntu/.local/lib/python3.10/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN5torch3jit17parseSchemaOrNameERKSsb
+INFO 02-12 07:32:30 __init__.py:183] Automatically detected platform cuda.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 111, in _get_module
+    return importlib.import_module("." + module_name, self.__name__)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+INFO 02-12 07:32:30 __init__.py:183] Automatically detected platform cuda.
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/trainer/grpo_trainer.py", line 53, in <module>
+    from vllm import LLM, SamplingParams
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/__init__.py", line 6, in <module>
+    from vllm.engine.arg_utils import AsyncEngineArgs, EngineArgs
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/engine/arg_utils.py", line 18, in <module>
+    from vllm.executor.executor_base import ExecutorBase
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/executor/executor_base.py", line 13, in <module>
+    from vllm.platforms import current_platform
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/platforms/__init__.py", line 215, in __getattr__
+    _current_platform = resolve_obj_by_qualname(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/utils.py", line 1894, in resolve_obj_by_qualname
+    module = importlib.import_module(module_name)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/platforms/cuda.py", line 15, in <module>
+    import vllm._C  # noqa
+ImportError: /home/ubuntu/.local/lib/python3.10/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN5torch3jit17parseSchemaOrNameERKSsb
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/grpo/run_r1_grpo.py", line 14, in <module>
+    from trl import GRPOConfig, GRPOTrainer, get_peft_config, ModelConfig, TrlParser
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 102, in __getattr__
+    value = getattr(module, name)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 101, in __getattr__
+    module = self._get_module(self._class_to_module[name])
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 113, in _get_module
+    raise RuntimeError(
+RuntimeError: Failed to import trl.trainer.grpo_trainer because of the following error (look up to see its traceback):
+/home/ubuntu/.local/lib/python3.10/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN5torch3jit17parseSchemaOrNameERKSsb
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 111, in _get_module
+    return importlib.import_module("." + module_name, self.__name__)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/trainer/grpo_trainer.py", line 53, in <module>
+    from vllm import LLM, SamplingParams
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/__init__.py", line 6, in <module>
+    from vllm.engine.arg_utils import AsyncEngineArgs, EngineArgs
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/engine/arg_utils.py", line 18, in <module>
+    from vllm.executor.executor_base import ExecutorBase
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/executor/executor_base.py", line 13, in <module>
+    from vllm.platforms import current_platform
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/platforms/__init__.py", line 215, in __getattr__
+    _current_platform = resolve_obj_by_qualname(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/utils.py", line 1894, in resolve_obj_by_qualname
+    module = importlib.import_module(module_name)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/platforms/cuda.py", line 15, in <module>
+    import vllm._C  # noqa
+ImportError: /home/ubuntu/.local/lib/python3.10/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN5torch3jit17parseSchemaOrNameERKSsb
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/grpo/run_r1_grpo.py", line 14, in <module>
+    from trl import GRPOConfig, GRPOTrainer, get_peft_config, ModelConfig, TrlParser
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 102, in __getattr__
+    value = getattr(module, name)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 101, in __getattr__
+    module = self._get_module(self._class_to_module[name])
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 113, in _get_module
+    raise RuntimeError(
+RuntimeError: Failed to import trl.trainer.grpo_trainer because of the following error (look up to see its traceback):
+/home/ubuntu/.local/lib/python3.10/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN5torch3jit17parseSchemaOrNameERKSsb
+INFO 02-12 07:32:30 __init__.py:183] Automatically detected platform cuda.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 111, in _get_module
+    return importlib.import_module("." + module_name, self.__name__)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/trainer/grpo_trainer.py", line 53, in <module>
+    from vllm import LLM, SamplingParams
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/__init__.py", line 6, in <module>
+    from vllm.engine.arg_utils import AsyncEngineArgs, EngineArgs
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/engine/arg_utils.py", line 18, in <module>
+    from vllm.executor.executor_base import ExecutorBase
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/executor/executor_base.py", line 13, in <module>
+    from vllm.platforms import current_platform
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/platforms/__init__.py", line 215, in __getattr__
+    _current_platform = resolve_obj_by_qualname(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/utils.py", line 1894, in resolve_obj_by_qualname
+    module = importlib.import_module(module_name)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/platforms/cuda.py", line 15, in <module>
+    import vllm._C  # noqa
+ImportError: /home/ubuntu/.local/lib/python3.10/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN5torch3jit17parseSchemaOrNameERKSsb
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/grpo/run_r1_grpo.py", line 14, in <module>
+    from trl import GRPOConfig, GRPOTrainer, get_peft_config, ModelConfig, TrlParser
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 102, in __getattr__
+    value = getattr(module, name)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 101, in __getattr__
+    module = self._get_module(self._class_to_module[name])
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 113, in _get_module
+    raise RuntimeError(
+RuntimeError: Failed to import trl.trainer.grpo_trainer because of the following error (look up to see its traceback):
+/home/ubuntu/.local/lib/python3.10/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN5torch3jit17parseSchemaOrNameERKSsb
+INFO 02-12 07:32:30 __init__.py:183] Automatically detected platform cuda.
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 111, in _get_module
+    return importlib.import_module("." + module_name, self.__name__)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/trainer/grpo_trainer.py", line 53, in <module>
+    from vllm import LLM, SamplingParams
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/__init__.py", line 6, in <module>
+    from vllm.engine.arg_utils import AsyncEngineArgs, EngineArgs
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/engine/arg_utils.py", line 18, in <module>
+    from vllm.executor.executor_base import ExecutorBase
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/executor/executor_base.py", line 13, in <module>
+    from vllm.platforms import current_platform
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/platforms/__init__.py", line 215, in __getattr__
+    _current_platform = resolve_obj_by_qualname(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/utils.py", line 1894, in resolve_obj_by_qualname
+    module = importlib.import_module(module_name)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/vllm/platforms/cuda.py", line 15, in <module>
+    import vllm._C  # noqa
+ImportError: /home/ubuntu/.local/lib/python3.10/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN5torch3jit17parseSchemaOrNameERKSsb
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/grpo/run_r1_grpo.py", line 14, in <module>
+    from trl import GRPOConfig, GRPOTrainer, get_peft_config, ModelConfig, TrlParser
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 102, in __getattr__
+    value = getattr(module, name)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 101, in __getattr__
+    module = self._get_module(self._class_to_module[name])
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/trl/import_utils.py", line 113, in _get_module
+    raise RuntimeError(
+RuntimeError: Failed to import trl.trainer.grpo_trainer because of the following error (look up to see its traceback):
+/home/ubuntu/.local/lib/python3.10/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN5torch3jit17parseSchemaOrNameERKSsb
+W0212 07:32:31.175000 10872 torch/distributed/elastic/multiprocessing/api.py:896] Sending process 11090 closing signal SIGTERM
+W0212 07:32:31.176000 10872 torch/distributed/elastic/multiprocessing/api.py:896] Sending process 11092 closing signal SIGTERM
+W0212 07:32:31.176000 10872 torch/distributed/elastic/multiprocessing/api.py:896] Sending process 11093 closing signal SIGTERM
+W0212 07:32:31.176000 10872 torch/distributed/elastic/multiprocessing/api.py:896] Sending process 11094 closing signal SIGTERM
+W0212 07:32:31.176000 10872 torch/distributed/elastic/multiprocessing/api.py:896] Sending process 11095 closing signal SIGTERM
+W0212 07:32:31.177000 10872 torch/distributed/elastic/multiprocessing/api.py:896] Sending process 11096 closing signal SIGTERM
+E0212 07:32:31.454000 10872 torch/distributed/elastic/multiprocessing/api.py:868] failed (exitcode: 1) local_rank: 1 (pid: 11091) of binary: /usr/bin/python3
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1157, in launch_command
+    deepspeed_launcher(args)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/accelerate/commands/launch.py", line 845, in deepspeed_launcher
+    distrib_run.run(args)
+  File "/usr/lib/python3/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/lib/python3/dist-packages/torch/distributed/launcher/api.py", line 137, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/usr/lib/python3/dist-packages/torch/distributed/launcher/api.py", line 268, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+run_r1_grpo.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-02-12_07:32:31
+  host      : 209-20-157-91
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 11091)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+
+
+
+
+
+
+
+
+ubuntu@192-222-53-108:~/grpo$ pip show torch torchaudio tensorboard vllm torchvision transformers datasets accelerate hf-transfer deepspeed trl
+Name: torch
+Version: 2.5.1
+Summary: Tensors and Dynamic neural networks in Python with strong GPU acceleration
+Home-page: https://pytorch.org/
+Author: PyTorch Team
+Author-email: packages@pytorch.org
+License: BSD-3-Clause
+Location: /usr/lib/python3/dist-packages
+Requires: 
+Required-by: accelerate, compressed-tensors, deepspeed, flash_attn, outlines, torchaudio, vllm, xformers, xgrammar
+---
+Name: torchaudio
+Version: 2.5.1+cu121
+Summary: An audio package for PyTorch
+Home-page: https://github.com/pytorch/audio
+Author: Soumith Chintala, David Pollack, Sean Naren, Peter Goldsborough, Moto Hira, Caroline Chen, Jeff Hwang, Zhaoheng Ni, Xiaohui Zhang
+Author-email: soumith@pytorch.org
+License: 
+Location: /home/ubuntu/.local/lib/python3.10/site-packages
+Requires: torch
+Required-by: 
+---
+Name: tensorboard
+Version: 2.18.0
+Summary: TensorBoard lets you watch Tensors Flow
+Home-page: https://github.com/tensorflow/tensorboard
+Author: Google Inc.
+Author-email: packages@tensorflow.org
+License: Apache 2.0
+Location: /usr/lib/python3/dist-packages
+Requires: 
+Required-by: 
+---
+Name: vllm
+Version: 0.7.0
+Summary: A high-throughput and memory-efficient inference and serving engine for LLMs
+Home-page: https://github.com/vllm-project/vllm
+Author: vLLM Team
+Author-email: 
+License: Apache 2.0
+Location: /home/ubuntu/.local/lib/python3.10/site-packages
+Requires: aiohttp, blake3, cloudpickle, compressed-tensors, depyf, einops, fastapi, filelock, gguf, importlib_metadata, lark, lm-format-enforcer, mistral_common, msgspec, numpy, nvidia-ml-py, openai, outlines, partial-json-parser, pillow, prometheus-fastapi-instrumentator, prometheus_client, protobuf, psutil, py-cpuinfo, pydantic, pyyaml, pyzmq, ray, requests, sentencepiece, tiktoken, tokenizers, torch, torchvision, tqdm, transformers, typing_extensions, uvicorn, xformers, xgrammar
+Required-by: 
+---
+Name: torchvision
+Version: 0.20.1
+Summary: image and video datasets and models for torch deep learning
+Home-page: https://github.com/pytorch/vision
+Author: PyTorch Core Team
+Author-email: soumith@pytorch.org
+License: BSD
+Location: /usr/lib/python3/dist-packages
+Requires: 
+Required-by: vllm
+---
+Name: transformers
+Version: 4.48.3
+Summary: State-of-the-art Machine Learning for JAX, PyTorch and TensorFlow
+Home-page: https://github.com/huggingface/transformers
+Author: The Hugging Face team (past and future) with the help of all our contributors (https://github.com/huggingface/transformers/graphs/contributors)
+Author-email: transformers@huggingface.co
+License: Apache 2.0 License
+Location: /home/ubuntu/.local/lib/python3.10/site-packages
+Requires: filelock, huggingface-hub, numpy, packaging, pyyaml, regex, requests, safetensors, tokenizers, tqdm
+Required-by: compressed-tensors, trl, vllm, xgrammar
+---
+Name: datasets
+Version: 3.1.0
+Summary: HuggingFace community-driven open-source library of datasets
+Home-page: https://github.com/huggingface/datasets
+Author: HuggingFace Inc.
+Author-email: thomas@huggingface.co
+License: Apache 2.0
+Location: /home/ubuntu/.local/lib/python3.10/site-packages
+Requires: aiohttp, dill, filelock, fsspec, huggingface-hub, multiprocess, numpy, packaging, pandas, pyarrow, pyyaml, requests, tqdm, xxhash
+Required-by: trl
+---
+Name: accelerate
+Version: 1.3.0
+Summary: Accelerate
+Home-page: https://github.com/huggingface/accelerate
+Author: The HuggingFace team
+Author-email: zach.mueller@huggingface.co
+License: Apache
+Location: /home/ubuntu/.local/lib/python3.10/site-packages
+Requires: huggingface-hub, numpy, packaging, psutil, pyyaml, safetensors, torch
+Required-by: trl
+---
+Name: hf_transfer
+Version: 0.1.9
+Summary: Speed up file transfers with the Hugging Face Hub.
+Home-page: 
+Author: 
+Author-email: 
+License: 
+Location: /home/ubuntu/.local/lib/python3.10/site-packages
+Requires: 
+Required-by: 
+---
+Name: deepspeed
+Version: 0.15.4
+Summary: DeepSpeed library
+Home-page: http://deepspeed.ai
+Author: DeepSpeed Team
+Author-email: deepspeed-info@microsoft.com
+License: Apache Software License 2.0
+Location: /home/ubuntu/.local/lib/python3.10/site-packages
+Requires: hjson, msgpack, ninja, numpy, nvidia-ml-py, packaging, psutil, py-cpuinfo, pydantic, torch, tqdm
+Required-by: 
+---
+Name: trl
+Version: 0.14.0
+Summary: Train transformer language models with reinforcement learning.
+Home-page: https://github.com/huggingface/trl
+Author: Leandro von Werra
+Author-email: leandro.vonwerra@gmail.com
+License: Apache 2.0
+Location: /home/ubuntu/.local/lib/python3.10/site-packages
+Requires: accelerate, datasets, rich, transformers
+Required-by: 
