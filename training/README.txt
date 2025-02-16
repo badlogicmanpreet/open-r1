@@ -52,3 +52,15 @@
 
     export VLLM_WORKER_MULTIPROC_METHOD=spawn
     upgrading GCC to 12
+    CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 accelerate launch ...
+
+    ======================== Environment ========================
+
+   1. confirm number of GPUs
+      nvidia-smi 
+   2. confirm CUDA version
+      nvcc --version
+   3. confirm GCC version
+      gcc --version
+   4. confirm Python version
+      python --version
