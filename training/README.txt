@@ -50,17 +50,26 @@
 
     ======================== DEBUG ========================
 
-    export VLLM_WORKER_MULTIPROC_METHOD=spawn
-    upgrading GCC to 12
-    CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 accelerate launch ...
-
-    ======================== Environment ========================
-
-   1. confirm number of GPUs
-      nvidia-smi 
-   2. confirm CUDA version
-      nvcc --version
-   3. confirm GCC version
-      gcc --version
-   4. confirm Python version
-      python --version
+   Ensure you really have 8 GPUs:
+         1. confirm number of GPUs
+            nvidia-smi 
+         2. confirm CUDA version
+            nvcc --version
+         3. confirm GCC version
+            gcc --version
+   Monitor GPU usage:
+      Use nvidia-smi to monitor GPU usage and see if any GPU is underutilized or has a high memory usage.
+   Try with fewer GPUs:
+      Temporarily set num_processes: 1 or num_processes: 2 and see if it still segfaults. That quickly tells you if the crash is from multi‑GPU synchronization or something else.
+   Explicitly map devices:
+      If you see “PG ID 0 ... using GPU 0 to perform barrier as devices used by this process are unknown,” it can help to set environment variables like:
+      CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 accelerate launch ...
+      and/or configure the device mapping in your Python code or accelerate config.
+   Check if the same config works without vLLM:
+      If everything is stable without use_vllm: true, then the fault might be an interaction between vLLM and DeepSpeed’s usage of GPU memory.
+      Look for logs or OOM errors:
+   Check the logs for any error messages.
+      Sometimes a segfault is actually an out-of-memory error or driver crash. Check dmesg or /var/log/syslog for hints.
+   Try    
+      export VLLM_WORKER_MULTIPROC_METHOD=spawn
+      upgrading GCC to 12

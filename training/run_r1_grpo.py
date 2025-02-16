@@ -152,6 +152,7 @@ def grpo_function(
     ################
     # Load tokenizer
     ################
+    logger.info("Loading tokenizer")
     tokenizer = AutoTokenizer.from_pretrained(
         (
             script_args.tokenizer_name_or_path
@@ -167,6 +168,7 @@ def grpo_function(
     ###############
     # Load datasets
     ###############
+    logger.info("Loading dataset")
     # Load dataset from Hugging Face Hub
     dataset = load_dataset(script_args.dataset_id_or_path, split=script_args.dataset_splits)
     # select a random subset of 50k samples
@@ -192,6 +194,7 @@ def grpo_function(
           }]
         return {"prompt": tokenizer.apply_chat_template(r1_prefix, tokenize=False, continue_final_message=True), "target": target, "nums": numbers}
 
+    logger.info("Formatting dataset")
     # convert our dataset to the r1 prompt
     dataset = dataset.map(lambda x: generate_r1_prompt(x["nums"], x["target"]))
 
@@ -218,6 +221,7 @@ def grpo_function(
     ###############
     # Training loop
     ###############
+    logger.info("Training model")
     # Check for last checkpoint
     last_checkpoint = get_checkpoint(training_args)
     if last_checkpoint is not None and training_args.resume_from_checkpoint is None:
@@ -262,6 +266,7 @@ def grpo_function(
 
 
 def main():
+    logger.info("Starting training script")
     from huggingface_hub import login
  
     login(token="", add_to_git_credential=True) # ADD YOUR TOKEN HERE
@@ -270,6 +275,7 @@ def main():
     model_args, script_args, training_args = parser.parse_args_and_config()
 
     # Run the main training loop
+    logger.info("Starting training - grpo_function")
     grpo_function(model_args, script_args, training_args)
 
 
