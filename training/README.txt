@@ -45,8 +45,8 @@
     --config training/grpo-qwen-2.5-3b-deepseek-r1-countdown.yaml
 
     ACCELERATE_LOG_LEVEL=info accelerate launch --config_file training/deepspeed_zero2.yaml \
-    --num_processes=7 training/run_r1_grpo.py \
-    --config training/grpo-qwen-2.5-3b-deepseek-r1-countdown.yaml
+    --num_processes=8 training/run_r1_grpo.py \
+    --config training/grpo-qwen-2.5-3b-deepseek-r1-countdown.yaml |& tee output.txt
 
     ======================== DEBUG ========================
 

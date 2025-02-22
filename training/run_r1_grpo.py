@@ -36,6 +36,13 @@ handler.setFormatter(
 )
 logger.addHandler(handler)
 
+# File handler
+file_handler = logging.FileHandler("app.log")  # Change filename as needed
+file_handler.setFormatter(
+    logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+)
+logger.addHandler(file_handler)
+
 ########################
 # Helper functions
 ########################
