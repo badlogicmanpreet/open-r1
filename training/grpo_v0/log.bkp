@@ -1,0 +1,43 @@
+INFO 02-15 14:53:32 model_runner.py:1110] Starting to load model Qwen/Qwen2.5-3B-Instruct...
+INFO 02-15 14:53:32 weight_utils.py:252] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/2 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  50% Completed | 1/2 [00:00<00:00,  2.57it/s]
+Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:01<00:00,  1.71it/s]
+Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:01<00:00,  1.80it/s]
+
+INFO 02-15 14:53:34 model_runner.py:1115] Loading model weights took 0.0000 GB
+INFO 02-15 14:53:35 worker.py:267] Memory profiling takes 0.81 seconds
+INFO 02-15 14:53:35 worker.py:267] the current vLLM instance can use total_gpu_memory (79.10GiB) x gpu_memory_utilization (0.50) = 39.55GiB
+INFO 02-15 14:53:35 worker.py:267] model weights take 0.00GiB; non_torch_memory takes 0.00GiB; PyTorch activation peak memory takes 0.00GiB; the rest of the memory reserved for KV Cache is 39.55GiB.
+INFO 02-15 14:53:35 executor_base.py:110] # CUDA blocks: 71995, # CPU blocks: 7281
+INFO 02-15 14:53:35 executor_base.py:115] Maximum concurrency for 32768 tokens per request: 35.15x
+INFO 02-15 14:53:37 model_runner.py:1434] Capturing cudagraphs for decoding. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI. If out-of-memory error occurs during cudagraph capture, consider decreasing gpu_memory_utilization or switching to eager mode. You can also reduce the max_num_seqs as needed to decrease memory usage.
+Capturing CUDA graph shapes: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 35/35 [00:12<00:00,  2.86it/s]
+INFO 02-15 14:53:49 model_runner.py:1562] Graph capturing finished in 12 secs, took 0.00 GiB
+INFO 02-15 14:53:49 llm_engine.py:431] init engine (profile, create kv cache, warmup model) took 15.39 seconds
+[rank0]:[W215 14:53:50.341491239 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+W0215 14:53:56.350000 14215 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 14425 closing signal SIGTERM
+W0215 14:53:56.351000 14215 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 14427 closing signal SIGTERM
+W0215 14:53:56.351000 14215 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 14428 closing signal SIGTERM
+W0215 14:53:56.351000 14215 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 14429 closing signal SIGTERM
+W0215 14:53:56.351000 14215 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 14430 closing signal SIGTERM
+W0215 14:53:56.351000 14215 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 14431 closing signal SIGTERM
+E0215 14:53:58.282000 14215 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: -11) local_rank: 1 (pid: 14426) of binary: /home/ubuntu/open-r1/openr1/bin/python3
+Traceback (most recent call last):
+  File "/home/ubuntu/open-r1/openr1/bin/accelerate", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/ubuntu/open-r1/openr1/lib/python3.11/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/home/ubuntu/open-r1/openr1/lib/python3.11/site-packages/accelerate/commands/launch.py", line 1157, in launch_command
+    deepspeed_launcher(args)
+  File "/home/ubuntu/open-r1/openr1/lib/python3.11/site-packages/accelerate/commands/launch.py", line 845, in deepspeed_launcher
+    distrib_run.run(args)
+  File "/home/ubuntu/open-r1/openr1/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/home/ubuntu/open-r1/openr1/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/open-r1/openr1/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
